@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 650px;
+      font-family: Arial, sans-serif;
+      text-align: left;
+    }
+
+    th, td {
+      border: 2px solid #000000;
+      padding: 6px 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #000000;
+      vertical-align: middle;
+    }
+
+    /* Column Widths (4 Equal Columns) */
+    .col-1 { width: 25%; }
+    .col-2 { width: 25%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 25%; }
+
+    /* Header Alignment */
+    .header-main {
+      text-align: center;
+      font-size: 22px;
+      padding: 8px;
+    }
+
+    .header-sub {
+      text-align: center;
+      font-size: 20px;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <colgroup>
+    <col class="col-1">
+    <col class="col-2">
+    <col class="col-3">
+    <col class="col-4">
+  </colgroup>
+  <thead>
+    <!-- Main Title -->
+    <tr>
+      <th colspan="4" class="header-main">List</th>
+    </tr>
+    <!-- Pros / Cons Header -->
+    <tr>
+      <th colspan="2" class="header-sub">Pros</th>
+      <th colspan="2" class="header-sub">Cons</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Block 1: Pro1 (with SubPros) & Con1 -->
+    <tr>
+      <td rowspan="2">Pro1</td>
+      <td>SubPro1.1</td>
+      <td colspan="2" rowspan="2">Con1</td>
+    </tr>
+    <tr>
+      <td>SubPro1.2</td>
+    </tr>
+
+    <!-- Block 2: Pro2 & Con2 (with SubCons) -->
+    <tr>
+      <td colspan="2" rowspan="3">Pro2</td>
+      <td rowspan="3">Con2</td>
+      <td>SubCon2.1</td>
+    </tr>
+    <tr>
+      <td>SubCon2.2</td>
+    </tr>
+    <tr>
+      <td>SubCon2.3</td>
+    </tr>
+
+    <!-- Block 3: Pro3 & Con3 (with SubCons) -->
+    <tr>
+      <td colspan="2" rowspan="2">Pro3</td>
+      <td rowspan="2">Con3</td>
+      <td>SubCon3.1</td>
+    </tr>
+    <tr>
+      <td>SubCon3.2</td>
+    </tr>
+
+    <!-- Block 4: Empty Pro Space & Con4 -->
+    <tr>
+      <td colspan="2"></td>
+      <td colspan="2">Con4</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
